@@ -6,7 +6,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - export BUCKET=homebowdata-crud-bucket-v1/version1
+      - export BUCKET=homebowdata-crud-bucket-v1
       - mvn package
       - unzip target/HelloWorld-1.0.jar
       - aws cloudformation package --template-file template.yaml --s3-bucket $BUCKET --output-template-file outputtemplate.yaml
