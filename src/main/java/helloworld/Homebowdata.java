@@ -21,4 +21,15 @@ public class Homebowdata {
     @DynamoDBAttribute(attributeName = "address")
     public Address getAddress() {return address;}
 
+    public void setMlsId(String mlsId) {
+        this.mlsId = mlsId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 }
