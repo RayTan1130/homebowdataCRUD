@@ -9,6 +9,7 @@ public class Homebowdata {
 
     private String mlsId;
     private String name;
+    private String type;
 //    private Address address;
 
     //primary key is propertyId
@@ -17,6 +18,9 @@ public class Homebowdata {
 
     @DynamoDBAttribute(attributeName = "name")
     public String getName() { return name;}
+
+    @DynamoDBAttribute(attributeName = "type")
+    public String getType() { return type;}
 
 //    @DynamoDBAttribute(attributeName = "address")
 //    public Address getAddress() {return address;}
@@ -29,6 +33,9 @@ public class Homebowdata {
         this.name = name;
     }
 
+    public void setType(String type) {
+        this.type = type;
+    }
 //    public void setAddress(Address address) {
 //        this.address = address;
 //    }
