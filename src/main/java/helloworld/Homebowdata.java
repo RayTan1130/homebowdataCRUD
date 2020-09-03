@@ -4,7 +4,10 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
-@DynamoDBTable(tableName = "homebowdata-v1")
+import java.util.List;
+import java.util.Map;
+
+@DynamoDBTable(tableName = "homebowdata-v2")
 public class Homebowdata {
 
     private String mlsId;
@@ -17,9 +20,7 @@ public class Homebowdata {
     private double priceSqft;
 
     @DynamoDBHashKey(attributeName = "mlsId")
-    public String getMlsId() {
-        return mlsId;
-    }
+    public String getMlsId() { return mlsId; }
 
     @DynamoDBAttribute(attributeName = "type")
     public String getType() {
